@@ -46,8 +46,9 @@ const { createApp } = Vue
         },
         dinamicImage(index) {
             this.activeImage = index
- 
-
         }
+      },
+      mounted(){
+        setInterval(this.goToNext, 3000)
       }
   }).mount('#app')

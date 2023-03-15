@@ -46,6 +46,12 @@ const { createApp } = Vue
         },
         dinamicImage(index) {
             this.activeImage = index
+        },
+        activeImageBox(index) {
+            if(index == this.activeImage){
+                return 'active'
+            }
+
         }
       },
       mounted(){

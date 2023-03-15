@@ -30,7 +30,13 @@
                     <div class="prev" @click="goToPrev"></div>
                     <div class="next" @click="goToNext"></div>
                     <div class="thumb">
-                        <img @click="dinamicImage(index)" v-for="(element,index) in slides" :src="element.image" alt="Svezia" />
+                        <img @click="dinamicImage(index)" 
+                            v-for="(element,index) in slides" 
+                            :src="element.image" 
+                            alt="Svezia"
+                            :class="activeImageBox(index)" 
+
+                            />
                     </div>
 
                 </div>

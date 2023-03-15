@@ -40,8 +40,13 @@ const { createApp } = Vue
         },
         goToPrev() {
             this.activeImage--
-            if(this.activeImage < 0)
-               this.activeImage = this.slides.length-1
+        if(this.activeImage < 0){ 
+            this.activeImage = this.slides.length-1
+        }
+        },
+        dinamicImage(index) {
+            this.activeImage = index
+ 
 
         }
       }
